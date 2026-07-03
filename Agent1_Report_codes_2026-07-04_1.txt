@@ -2,3 +2,4 @@
 [A6] fetch origin/dev; fast-forward 가능성 검증; dev dee973a 유지; clean/SHA 확인.
 [A7] fetch origin/back; local/origin back=dee973a 일치 확인; dev dee973a merge(no-op); clean 검증.
 [A8] temp_rexcloud 8cab147이 back dee973a의 조상임을 확인; merge 결과 already included; clean 검증.
+[A9] fetch origin/back; local/origin back=dee973a 확인; push 결과 up-to-date; ls-remote SHA 검증.
