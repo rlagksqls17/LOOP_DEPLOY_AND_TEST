@@ -12,8 +12,7 @@ v. {temp} = temp_rexcloud 를 뜻함.
 
 a. 파일 개요
 #1-1. 메인 메모리 파일 위치  {수정 금지}
-	- Agent1:
-	- Agent2:
+	- 보안폴더 내 {메모리 github}/main_memory.txt
 
 #1-2. 메인 메모리 파일 정의 {수정 금지} 
 	1. KMPC Preclinical 프로젝트의 현황과 맥락을 인수인계하기 위한 프로젝트 메인메모리
@@ -39,8 +38,8 @@ a. 파일 개요
 
 
 #2-1. 보안 파일 위치 {수정 금지}
-	- Agent1:
-	- Agent2:
+	- Agent1:Agent1-local D:\home_rlagksqls17\7_hetero\k_dev_real_source\loop_module_deploy_and_test\DEPLOY_Agent1\Agent1_memory\private.txt
+	- Agent2:Agent2-local
 #2-2. 보안 파일 정의 {수정 금지}
 	1. 서버 IP, 비밀번호, DB 암호, 쿠키, 세션과 SSH 키, 현재 사용자가 사용중인 git ID 및 ghp 토큰 정보 
 #2-3. 보안 파일 참조/작성 규칙 {수정 금지}
@@ -51,8 +50,8 @@ a. 파일 개요
 	   Agent2와 Agent1은 상호 {기록_소통}메모리를 통하여 {기록_소통}할 수 있다. (#4-1 ~ #4-3. 규칙을 따른다.)
 
 #3-1. 주 업무 실행 파일 위치 {수정 금지}
-	- Agent1:
-	- Agent2:
+	- Agent1:Agent1-local D:\home_rlagksqls17\7_hetero\k_dev_real_source\loop_module_deploy_and_test\DEPLOY_Agent1\Agent1_role\role.txt
+	- Agent2:Agent2-local
 #3-2. 주 업무 실행 파일 정의 {수정 금지}
 	1. Git 명령 규칙, 승인 조건, 테스트 판정 규칙처럼 실행을 통제하는 상세한 내용은 Agent별 실행 문서에서 다룬다. 
 #3-3. 주 업무 실행 파일 참조/작성 규칙 {수정 금지}
@@ -63,9 +62,7 @@ a. 파일 개요
 	5. Agent1과 Agent2는 주 업무 실행 파일 내 적힌 각 단계마다 자신의 업무 성공 여부를 판단한다. 업무 성공 여부를 판단하는 기준은 주 업무 실행 파일에서 참조 가능하다.
 	6. Agent1과 Agent2는 주 업무 실행 파일을 수정할 수 없다.
 
-#4-1. 소통 메모리 파일 위치 : {수정 금지}
-#4-2. 소통 메모리 파일 정의 : {수정 금지}
-#4-3. 소통 메모리 파일 참조/작성 규칙 : {수정 금지}
+#4-1. 소통 메모리 파일 위치 : 보안폴더 내 {메모리 github}/communication/
 
 ---
 
