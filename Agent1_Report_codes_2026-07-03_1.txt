@@ -3,3 +3,4 @@
 [A7] git fetch origin back; local/origin back=cbfe4ee 확인; git switch back; git merge --no-edit f205505; clean 검증. back after=f205505.
 [A8] back=f205505가 temp=8cab147의 조상인지 확인; git merge --no-edit 8cab147; fast-forward 및 clean 검증. back after=8cab147.
 [A9] git fetch origin back; merge-base --is-ancestor cbfe4ee 8cab147; git push origin 8cab147:refs/heads/back; ls-remote 검증.
+[A10_FAIL] memory pull 반복 중 Agent2_work_failed.txt 수신. Agent2 A6: SHA 8cab147, HTTP200/rowCount24/V12/VT12/SQLite·컨테이너 정상; iframe 연결 종료 모달로 변수 9개 화면 미표시.

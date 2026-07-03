@@ -3,3 +3,4 @@
 [A7] A7 성공: local back과 origin/back 일치 확인 후 dev f205505를 local back에 병합했습니다.
 [A8] A8 성공: temp_rexcloud 8cab147을 local back에 충돌 없이 fast-forward 병합했습니다.
 [A9] A9 성공: local back 8cab147을 origin/back에 force 없이 push하고 원격 SHA 일치를 확인했습니다.
+[A10_FAIL] A10 실패: Agent2 로컬 검증에서 API·SQLite 데이터는 정상이었으나 RexCloud iframe이 연결 종료 모달 상태여서 변수 선택 화면 검증에 실패했습니다. 루프를 중단합니다.
