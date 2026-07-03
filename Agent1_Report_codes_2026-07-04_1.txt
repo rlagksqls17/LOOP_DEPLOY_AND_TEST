@@ -1,1 +1,2 @@
 ﻿[A5] git pull --ff-only(memory); git ls-remote origin refs/heads/dev; local dev=f205505, remote dev=dee973a, SAME=NO.
+[A6] git fetch origin dev; merge-base --is-ancestor f205505 dee973a; git switch dev; git merge --ff-only dee973a; clean/SHA 검증.
