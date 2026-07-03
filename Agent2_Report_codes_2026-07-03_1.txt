@@ -1,2 +1,0 @@
-A5: memory git pull --ff-only 후 communication/Agent1_A9_succeessed.txt 확인. Agent1 back push 완료 신호 수신. A6로 진행.
-A6_FAIL: testedSha=8cab147. HTTP200,rowCount24,V12,VT12,SQLite/컨테이너 O. iframe은 RexCloud 화면을 띄웠으나 '연결이 종료되었습니다' 모달로 변수 9개 선택 화면 미표시.
