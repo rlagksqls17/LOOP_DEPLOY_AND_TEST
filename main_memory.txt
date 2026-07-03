@@ -7,7 +7,7 @@ i. 작성 기준일: 2026-07-03 (Asia/Seoul)
 ii. 마지막 수정자:User
 iii. 인수 대상: DEPLOY_Agent1, DEPLOY_TEST_Agent2 및 작업자 {수정 금지}
 iv. 모든 파일에서 DEPLOY_Agent1은 편의상 Agent1, DEPLOY_TEST_Agent2는 Agent2로 작성되어으니 참조한다.
-
+v. {temp} = temp_rexcloud 를 뜻함.
 ---
 
 a. 파일 개요
@@ -24,6 +24,19 @@ a. 파일 개요
 	4. Agent1과 Agent2는 메인 메모리 파일 내 {수정 금지} 태그가 적힌 단락 전체를 변경할 수 없다 {DO NOT}.
 	5. 메인 메모리 파일 변경 시, 변경자는 작성 기준일 및 마지막 수정자 (User:사용자, Agent1, Agent2)를 기록/변경해둔다.
 	6. {수정 금지} 이외 단락은 기록된 {변경 가능자}가 담당한다. 해당 단락의 기존 양식을 참조하여 기록한다.
+
+	코드 수행 시 codex가 자주 겪는 PowerShell 따옴표 문제는 아래의 규칙을 참조한다.
+	1. 고정 문자열은 작은따옴표 사용
+	2. 변수 확장이 필요할 때만 큰따옴표 사용
+	3. 파일 경로는 -LiteralPath 사용
+	4. 실행 파일 절대경로는 & 연산자로 실행
+	5. 복잡한 명령은 한 줄 PowerShell로 만들지 않고 .ps1 파일로 분리
+	6. JSON은 문자열로 직접 조립하지 않고 ConvertTo-Json 사용
+	7. Invoke-Expression 사용 금지
+	8. PowerShell과 cmd/bash 명령 혼합 금지
+	9. 외부 명령 실행 후 $LASTEXITCODE 확인
+	10. 한글이 포함된 Windows PowerShell 스크립트는 UTF-8 BOM 사용
+
 
 #2-1. 보안 파일 위치 {수정 금지}
 	- Agent1:
@@ -47,7 +60,6 @@ a. 파일 개요
 	1. Agent1과 Agent2는 루프 시작 시 {3 순위로} 주 업무 실행 파일을 확인하고, 업무에 참조한다.
 	2. 주 업무 실행 파일은 업무를 진행하는데 반드시 이행해야할 방향이 담긴 "상세 지시서"이다.
 	3. Agent1과 Agent2는 #3-1 단락에 적힌 위치에서 주 업무 실행 파일을 읽고, 이행한다.
-	4. Agent1과 Agent2는 주 업무 실행 파일 내 적히지 않은 정보에 대해서 추론하지 않으며, 이행하지 않는다. 단, 주 업무 실행 파일에 적힌 {추가업무} 태그가 달린 문장은 추가업무 가능하다.
 	5. Agent1과 Agent2는 주 업무 실행 파일 내 적힌 각 단계마다 자신의 업무 성공 여부를 판단한다. 업무 성공 여부를 판단하는 기준은 주 업무 실행 파일에서 참조 가능하다.
 	6. Agent1과 Agent2는 주 업무 실행 파일을 수정할 수 없다.
 
@@ -73,9 +85,9 @@ b. 프로젝트 개요
 # 1-3. 작업 구조 간략 소개 {수정 금지}
 	1. 프론트엔드 작업자는 별도로 있으며 (Agent가 아님.) 화면/JSP 작업을 주로 담당한다.
 	2. 백엔드는 Controller, Service, Mapper, SQL, 배치와 외부 연동을 담당한다.
-	3. DEPLOY_AND_TEST MODULE 루프의 Agent1은 Agent1-Local에서 Git으로의 push, Git pull, Git merge·빌드·Tomcat·서버 내 배포 측 작업을 담당할 예정이다.
+	3. DEPLOY_AND_TEST MODULE 루프의 Agent1은 Agent1-Local에서 Git push·pull·merge, 빌드와 로컬 Tomcat 작업을 담당할 예정이다.
 	4. Agent2는 Agent1 local의 git push가 완료된 뒤, role.txt에 정해진 브랜치를 Agent2가 확인 후 Agent2의 local로 pull 해와서 role에 따라 local에 화면을 띄운 뒤 API 정상 응답 여부를 검증한다. 
-  	또한 서버 내 배포가 완료된 뒤 Chrome에서 실제 화면 렌더링 상태 및 API 응답데이터 검증 여부를 확인하는 역할로 설계되어 있다. 
+	또한 서버 내 배포가 완료된 뒤 Chrome에서 실제 화면 렌더링 상태 및 API 응답데이터 검증 여부를 확인하는 역할로 설계되어 있다. 또한 서버 내 배포 측 작업을 담당할 예정이다.
 	5. Agent1과 Agent2의 역할은 애플리케이션 소스 코드나 JSP, 경로, DB 구조, Rexcloud 자체를 개발/변경하는 역할이 아니다.
 
 ---
@@ -293,7 +305,7 @@ h. MariaDB와 SQL 운영 구조
 	- WSL Ubuntu 안의 기존 Docker 컨테이너 mariadb를 사용한다.
 	- localhost:3306으로 Windows Tomcat 애플리케이션이 접근한다.
 	- 계정과 암호는 private.txt 및 로컬 environment.properties에 있다.
-	- 로컬 DB 준비 절차는 codex_bepo_manual.txt에 정리되어 있다.
+	- 로컬 DB 준비 절차는 각 Agent 보안파일의 local.manual 경로에 있는 codex_bepo_manual.txt에 정리되어 있다.
 
 #1-3. 운영 DB {수정 금지}
 	운영 애플리케이션의 environment.properties에 JDBC 접속정보가 있다.
