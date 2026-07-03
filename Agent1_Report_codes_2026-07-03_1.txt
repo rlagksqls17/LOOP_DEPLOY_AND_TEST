@@ -1,1 +1,2 @@
 ﻿[A5] git pull --ff-only(memory); git ls-remote origin refs/heads/dev; git rev-parse refs/heads/dev. local=ae79679, remote=f205505, SAME=NO.
+[A6_FAIL] git status --porcelain=v1. branch=temp_rexcloud, dirty=4: RexCloudService.java, RexCloudServiceImpl.java, RexCloudController.java modified; tmp_rexcloudGui.jsp untracked. fetch/switch/merge 미실행.
