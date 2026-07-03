@@ -1,1 +1,2 @@
 ﻿[A5] git pull --ff-only(memory); git ls-remote origin refs/heads/dev; local dev=dee973a, remote dev=dee973a, SAME=YES.
+[A6] fetch origin/dev; fast-forward 가능성 검증; dev dee973a 유지; clean/SHA 확인.
