@@ -1,3 +1,0 @@
-﻿[A5] A5 성공: origin/dev가 dee973a로 변경되어 로컬 dev f205505와 다름을 확인했습니다. A6 동기화를 계속합니다.
-[A6] A6 성공: 로컬 dev를 origin/dev의 확인된 SHA dee973a까지 fast-forward 동기화했습니다.
-[A7_FAIL] A7 실패: local back 8cab147과 origin/back 9efc19b가 일치하지 않습니다. 지시서의 병합 전 조건에 따라 dev→back 병합 없이 루프를 중단합니다.
