@@ -1,3 +1,6 @@
 [A6] 성공: back dee973a를 매뉴얼 방식으로 로컬 배포했고 RexCloud GUI/SQLite/API 핵심 검증을 통과했습니다. Chrome 자동 제어는 확장 미설치로 제한됐습니다.
 [A8] 성공: GitHub back과 dev가 이미 dee973a로 동일해 새 PR 없이 병합 완료 상태임을 확인했습니다.
 [A10] 성공: GitHub dev와 back이 dee973a로 동일해 추가 merge 없이 dev 반영 완료 상태임을 재확인했습니다.
+[A11] 성공: 운영 서버 source와 Tomcat ROOT를 dev dee973a로 배포하고 RexCloud Nginx proxy/guiUrl을 적용했습니다.
+[A12] 성공: Agent1_A13 완료 신호를 확인했습니다.
+[A13] 성공: 운영 RexCloud GUI/API/SQLite 검증 통과. HTTP 200, 24행, V/VT 12건, 필수 9컬럼, iframe 렌더링과 신규 로그 상태 정상입니다.

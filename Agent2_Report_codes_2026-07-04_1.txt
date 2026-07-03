@@ -1,3 +1,6 @@
 [A6] main_memory와 codex_bepo_manual.txt 확인 후 back dee973a=origin/back 검증. 매뉴얼 방식(mvn compile, classes/webapp 복사, Tomcat 재시작) 배포. HTTP 200, SQLite 24/V12/VT12, RexCloud connect-load-disconnect OK, iframe 렌더링 OK. Chrome 확장 미설치로 Codex browser 기준 확인.
 [A8] fetch origin dev/back; origin/dev=origin/back=dee973a, 양방향 rev-list 0 확인. PR 생성 대상 diff가 없어 GitHub PR 생성은 불필요/불가로 판단하고 already merged 상태로 기록.
 [A10] Agent1_A12 확인 후 origin/dev=origin/back=dee973a 재검증. rev-list 양방향 0으로 병합할 PR diff가 없어 GitHub dev는 이미 back 반영 완료 상태로 판단.
+[A11] 운영 서버 source dev=origin/dev dee973a 확인 후 Maven release build, ROOT 백업/배포, Nginx RexCloud proxy(/clinical,/clinical/api,/api/RexCloudUI)와 rexcloud.guiUrl 적용, Tomcat 재시작. root/gui HTTP 200.
+[A12] LOOP pull로 communication/Agent1_A13_succeessed.txt 확인. Agent1 보고상 GitHub dev/back dee973a 동일 및 merge 완료 상태 재확인.
+[A13] 서버 검증 PASS: page/clinical/connect/load/disconnect 200, DataUUID/UUID 포함, host/container SQLite row=24 V=12 VT=12, 필수 9컬럼 load OK, browser iframe 렌더링 OK, 신규 로그 오류 marker 없음.
