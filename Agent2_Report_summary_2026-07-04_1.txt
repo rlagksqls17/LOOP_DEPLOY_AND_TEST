@@ -1,0 +1,1 @@
+[A6] 성공: back dee973a를 매뉴얼 방식으로 로컬 배포했고 RexCloud GUI/SQLite/API 핵심 검증을 통과했습니다. Chrome 자동 제어는 확장 미설치로 제한됐습니다.
