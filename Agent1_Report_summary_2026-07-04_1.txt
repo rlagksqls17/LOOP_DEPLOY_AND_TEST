@@ -1,5 +1,0 @@
-﻿[A5] A5 성공: local dev와 origin/dev가 dee973a로 일치함을 확인했습니다. A6 동기화를 계속합니다.
-[A6] A6 성공: local dev가 origin/dev dee973a와 일치하며 clean 상태임을 확인했습니다.
-[A7] A7 성공: local back을 origin/back 9efc19b까지 fast-forward 동기화하고 dev dee973a를 병합했습니다.
-[A8] A8 성공: temp_rexcloud 8cab147 변경이 이미 local back dee973a에 포함되어 있음을 확인했습니다.
-[A9] A9 성공: local back dee973a를 origin/back에 force 없이 push하고 원격 SHA 일치를 확인했습니다.
