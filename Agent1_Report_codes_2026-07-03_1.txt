@@ -1,4 +1,0 @@
-﻿[A5] git pull --ff-only(memory); git ls-remote origin refs/heads/dev; git rev-parse refs/heads/dev. local=ae79679, remote=f205505, SAME=NO.
-[A6] git fetch origin dev; git merge-base --is-ancestor ae79679 f205505; git switch dev; git merge --ff-only f205505; clean/SHA 검증.
-[A7] git fetch origin back; local back cbfe4ee == origin/back 확인; git switch back; git merge --no-edit f205505; clean 검증. back after=f205505.
-[A8_FAIL] git merge --no-edit bea78e0 실행 중 content conflict; git merge --abort. merge-tree 확인: RexCloudServiceImpl.java, RexCloudController.java 충돌. back=f205505, worktree clean.
