@@ -1,0 +1,1 @@
+﻿[A5] A5 성공: local dev와 origin/dev가 dee973a로 일치함을 확인했습니다.
