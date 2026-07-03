@@ -1,3 +1,4 @@
 ﻿[A5] git pull --ff-only(memory); git ls-remote origin refs/heads/dev; local dev=dee973a, remote dev=dee973a, SAME=YES.
 [A6] git fetch origin dev; merge-base --is-ancestor dee973a dee973a; git switch dev; git merge --ff-only dee973a; clean/SHA 검증.
 [A7] fetch origin/back; local back 8cab147이 origin/back 9efc19b의 조상임을 확인; --ff-only 동기화 후 dev dee973a merge; clean 검증.
+[A8] temp_rexcloud 8cab147이 back dee973a의 조상인지 확인; git merge --no-edit 8cab147 결과 already included; clean 검증.
