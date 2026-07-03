@@ -1,2 +1,3 @@
 ﻿[A5] git pull --ff-only(memory); git ls-remote origin refs/heads/dev; git rev-parse refs/heads/dev. local=f205505, remote=f205505, SAME=YES.
 [A6] git fetch origin dev; merge-base --is-ancestor f205505 f205505; git switch dev; git merge --ff-only f205505; clean/SHA 검증.
+[A7_FAIL] git fetch origin back; dev=f205505, local back=f205505, origin/back=cbfe4ee 비교. 시작 SHA 불일치로 switch/merge 미실행; 기존 브랜치 보존.
