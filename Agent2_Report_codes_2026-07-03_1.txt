@@ -1,0 +1,1 @@
+A5: memory git pull --ff-only 후 communication/Agent1_work_failed.txt 확인. Agent1 보고상 temp_rexcloud 병합 중 RexCloudServiceImpl.java, RexCloudController.java 충돌로 A8_FAIL. Agent2는 back pull/로컬 배포/API 검증 미실행, 규칙_fail 수행.
